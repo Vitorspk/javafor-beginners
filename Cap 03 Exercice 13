@@ -1,0 +1,4 @@
+listing 13
+for(count=10; count < 5; count++) 
+  x += count; // this statement will not execute
+
