@@ -1,0 +1,22 @@
+listing 12
+// A generic queue interface. 
+public interface IGenQ<T> {      
+  // Put an item into the queue.      
+  void put(T ch) throws QueueFullException;   
+   
+  // Get an item from the queue.     
+  T get() throws QueueEmptyException;   
+}
+
+listing 13
+// An exception for queue-full errors.  
+public class QueueFullException extends Exception {  
+  int size;  
+  
+  QueueFullException(int s) { size = s; }  
+  
+  public String toString() {  
+   return "\nQueue is full. Maximum size is " +  
+          size;  
+  }  
+}  
